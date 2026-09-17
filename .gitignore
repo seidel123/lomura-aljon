@@ -1,0 +1,27 @@
+# WordPress uploads and database
+app/public/wp-content/uploads/
+app/public/wp-content/plugins/
+app/public/wp-content/themes/hello-elementor/
+app/sql/local.sql
+
+# Logs
+logs/
+
+# Generated files
+*.log
+*.tmp
+*.temp
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

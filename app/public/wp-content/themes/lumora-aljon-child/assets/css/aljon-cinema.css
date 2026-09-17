@@ -69,7 +69,7 @@ a:focus-visible, button:focus-visible, .elementor-button:focus-visible {
 /* ---------- Scaffold ---------- */
 .cn-wrap.e-con {
   --content-width: var(--cn-max);
-  max-width: 100%; margin-inline: auto;
+  max-width: var(--cn-max); margin-inline: auto;
   padding-inline: clamp(24px, 5vw, 72px) !important;
 }
 .cn-sec { padding-block: clamp(96px, 10vw, 180px) !important; position: relative; }

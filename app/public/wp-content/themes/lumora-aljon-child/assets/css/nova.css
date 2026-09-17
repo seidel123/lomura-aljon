@@ -179,7 +179,7 @@ img { max-width: 100%; height: auto; }
 /* ---------- Structural layer ---------- */
 .nova-wrap.e-con {
   --content-width: var(--nova-max);
-  max-width: 100%; margin-inline: auto;
+  max-width: var(--nova-max); margin-inline: auto;
   padding-inline: clamp(20px, 4vw, 48px) !important;
 }
 .nova-section { padding-block: clamp(72px, 8vw, 128px) !important; }
