@@ -1,0 +1,251 @@
+/* ============================================================
+   LUMORA ALJON — daylight layer (60/30/10 high-conversion theme)
+   Loads LAST; layout, markup and JS untouched. Strict system:
+   60% white/off-white surfaces · 30% slate structure/type ·
+   10% amber accent on conversion CTAs ONLY.
+   ============================================================ */
+
+:root {
+  --cn-ink: #FFFFFF;
+  --cn-coal: #F8F9FA;
+  --cn-bone: #1A202C;
+  --cn-fog: #4A5568;
+  --cn-accent: #D69E2E;
+  --cn-line: rgba(26, 32, 44, 0.14);
+  --dl-ink: #1A202C;
+  --dl-muted: #4A5568;
+  --dl-photo-text: #FFFFFF;
+  --dl-accent-deep: #B7791F;
+}
+
+html, body {
+  background: #F8F9FA !important;
+}
+
+body {
+  color: var(--dl-ink);
+}
+
+::selection { background: var(--dl-ink); color: #fff; }
+
+a:focus-visible, button:focus-visible, .elementor-button:focus-visible {
+  outline: 2px solid var(--dl-ink) !important; outline-offset: 3px;
+}
+
+/* ---------- 60%: section rhythm ---------- */
+.cn-scenes, .cn-notes, .cn-premiere { background: #FFFFFF !important; }
+.cn-atelier, .cn-voices { background: #F8F9FA !important; }
+.cn-atelier { border-block: 1px solid var(--cn-line); }
+.cn-voices { border-block: 1px solid var(--cn-line); }
+
+/* ---------- 30%: gallery type on light ---------- */
+.cn-kicker { color: var(--dl-muted) !important; }
+.cn-display { color: var(--dl-ink) !important; }
+.cn-display em { color: inherit !important; }
+.cn-lede { color: var(--dl-ink) !important; }
+.cn-ghost { -webkit-text-stroke: 1px rgba(26, 32, 44, 0.35); }
+.cn-chapter .cn-num {
+  color: var(--dl-muted);
+  border: 1px solid rgba(26, 32, 44, 0.35);
+}
+.cn-quiet-link { color: var(--dl-ink) !important; border-bottom-color: var(--dl-ink) !important; }
+a.cn-quiet-link:hover { color: var(--dl-ink) !important; }
+.cn-btn-line .elementor-button, a.cn-btn-line {
+  color: var(--dl-ink) !important; border-bottom-color: var(--dl-ink) !important;
+}
+.cn-btn-line .elementor-button:hover, a.cn-btn-line:hover { color: var(--dl-ink) !important; }
+
+/* ---------- Header: transparent over hero, white when scrolled ---------- */
+.nova-header.cn-head-bar.is-scrolled {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom-color: var(--cn-line);
+}
+.cn-word { color: var(--dl-photo-text) !important; }
+.cn-word em { color: var(--dl-photo-text) !important; }
+.nova-header.cn-head-bar.is-scrolled .cn-word { color: var(--dl-ink) !important; }
+.nova-header.cn-head-bar.is-scrolled .cn-word em { color: var(--dl-ink) !important; }
+.nova-header.cn-head-bar .nova-nav a { color: rgba(255, 255, 255, 0.82) !important; }
+.nova-header.cn-head-bar .nova-nav a::after { background: #fff !important; }
+.nova-header.cn-head-bar .nova-nav a:hover,
+.nova-header.cn-head-bar .nova-nav a.is-active { color: #fff !important; background: transparent !important; }
+.nova-header.cn-head-bar.is-scrolled .nova-nav a { color: var(--dl-muted) !important; }
+.nova-header.cn-head-bar.is-scrolled .nova-nav a::after { background: var(--dl-ink) !important; }
+.nova-header.cn-head-bar.is-scrolled .nova-nav a:hover,
+.nova-header.cn-head-bar.is-scrolled .nova-nav a.is-active { color: var(--dl-ink) !important; }
+.nova-header.cn-head-bar.is-scrolled .nova-menu-btn {
+  border-color: rgba(26, 32, 44, 0.35) !important; color: var(--dl-ink) !important;
+  background: transparent !important;
+}
+
+/* ---------- 10%: header CTA (conversion) ---------- */
+.cn-head-bar .nova-header-cta .elementor-button {
+  background: var(--cn-accent) !important; border-color: var(--cn-accent) !important;
+  color: var(--dl-ink) !important;
+}
+.cn-head-bar .nova-header-cta .elementor-button:hover {
+  background: var(--dl-accent-deep) !important; border-color: var(--dl-accent-deep) !important;
+  color: var(--dl-ink) !important; box-shadow: none !important; transform: none !important;
+}
+
+/* ---------- Ticker stays a dark ribbon (grounds transparent header) ---------- */
+.cn-ticker { background: rgba(8, 9, 11, 0.9); color: var(--dl-photo-text); border-block-color: rgba(8, 9, 11, 0.9); }
+.cn-ticker b { color: #fff; }
+
+/* ---------- Hero + interlude: photographic dark zones, white text ---------- */
+.cn-hero .cn-display,
+.cn-hero .cn-frac,
+.cn-interlude-quote { color: var(--dl-photo-text) !important; }
+.cn-hero .cn-lede { color: rgba(255, 255, 255, 0.85) !important; }
+.cn-hero-kicker { color: #fff !important; }
+.cn-hero .cn-frac small { color: rgba(255, 255, 255, 0.7) !important; }
+.cn-hero .cn-ghost { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); }
+.cn-hero .cn-btn-line .elementor-button, .cn-hero a.cn-btn-line {
+  color: #fff !important; border-bottom-color: rgba(255, 255, 255, 0.6) !important;
+}
+.cn-hero .cn-btn-line .elementor-button:hover, .cn-hero a.cn-btn-line:hover { color: #fff !important; }
+.cn-hero .nova-slider-progress { background: rgba(255, 255, 255, 0.3); }
+.cn-hero .nova-slider-progress i { background: #fff; }
+.cn-hero .nova-slider-dots button { background: rgba(255, 255, 255, 0.4) !important; }
+.cn-hero .nova-slider-dots button[aria-current="true"] { background: #fff !important; }
+.cn-hero a:focus-visible, .cn-hero button:focus-visible { outline-color: #fff !important; }
+.cn-scroll-cue::after { background: #fff; }
+
+/* ---------- Scenes on white ---------- */
+.cn-scene { background: #fff !important; border-color: var(--cn-line); }
+.cn-scene-body { border-left-color: var(--cn-line); }
+.cn-scene-num { color: var(--dl-ink); }
+.cn-scene-name { color: var(--dl-ink) !important; }
+.cn-scene-loc { color: var(--dl-muted) !important; }
+.cn-scene-specs { color: var(--dl-muted) !important; }
+.cn-scene-price { color: var(--dl-ink) !important; border-top-color: var(--cn-line); }
+.cn-scene:nth-child(2), .cn-scene:nth-child(3) { transform: none; }
+
+/* ---------- Atelier on off-white ---------- */
+.cn-state { color: var(--dl-ink) !important; }
+.cn-state::first-letter { color: var(--dl-ink); }
+.cn-state em { color: inherit !important; }
+.cn-figure figcaption { color: var(--dl-muted); }
+.cn-counter-num { color: var(--dl-ink) !important; }
+.cn-counter-label { color: var(--dl-muted) !important; }
+.cn-counter + .cn-counter { border-left-color: var(--cn-line); }
+.cn-counters { border-top-color: var(--cn-line); }
+
+/* ---------- Notes cards on white ---------- */
+.cn-card-img { border: 1px solid var(--cn-line); }
+.cn-card-cat { color: var(--dl-muted) !important; }
+.cn-card-title { color: var(--dl-ink) !important; }
+.cn-card:hover .cn-card-title { text-decoration-color: var(--dl-ink) !important; }
+.cn-card-ex { color: var(--dl-ink) !important; }
+.cn-card-meta { color: var(--dl-muted) !important; }
+
+/* ---------- Voices on off-white ---------- */
+.cn-voice-mark { color: rgba(26, 32, 44, 0.3); }
+.cn-voice-text { color: var(--dl-ink) !important; }
+.cn-voice-stars { color: var(--dl-ink); }
+.cn-voice-name { color: var(--dl-ink) !important; }
+.cn-voice-role { color: var(--dl-muted) !important; }
+.cn-rotor-count { color: var(--dl-muted); }
+.cn-rotor-prev, .cn-rotor-next {
+  border-color: rgba(26, 32, 44, 0.35) !important; color: var(--dl-ink) !important;
+}
+.cn-rotor-prev:hover, .cn-rotor-next:hover {
+  background: var(--dl-ink) !important; border-color: var(--dl-ink) !important; color: #fff !important;
+}
+
+/* Neutrals inherited from the base layer */
+.nova-skip { background: var(--dl-ink) !important; color: #fff !important; }
+.nova-menu-btn:hover { background: var(--dl-ink) !important; border-color: var(--dl-ink) !important; color: #fff !important; }
+
+/* ---------- Premiere panel: white card, quiet glow ---------- */
+.cn-panel {
+  border-color: var(--cn-line);
+  background: #FFFFFF !important;
+  box-shadow: 0 30px 70px -40px rgba(26, 32, 44, 0.3);
+}
+.cn-panel .cn-display { color: var(--dl-ink) !important; }
+.cn-panel .cn-lede { color: var(--dl-muted) !important; }
+.cn-premiere-side a { color: var(--dl-ink) !important; border-bottom-color: var(--dl-ink) !important; }
+.cn-premiere-side a:hover { color: var(--dl-ink) !important; }
+
+/* ---------- Forms: white fields, slate chrome ---------- */
+.nova-form label { color: var(--dl-muted) !important; }
+.nova-form input, .nova-form select, .nova-form textarea {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(26, 32, 44, 0.28) !important;
+  color: var(--dl-ink) !important;
+}
+.nova-form input::placeholder, .nova-form textarea::placeholder { color: rgba(26, 32, 44, 0.45); }
+.nova-form input:focus, .nova-form select:focus, .nova-form textarea:focus {
+  outline: none; border-color: var(--dl-ink) !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 3px rgba(26, 32, 44, 0.14) !important;
+}
+.nova-form-status { color: var(--dl-muted) !important; }
+.nova-form-alt, .nova-form-alt a { color: var(--dl-muted) !important; }
+
+/* ---------- 10%: submit (conversion) ---------- */
+.nova-form-submit {
+  background: var(--cn-accent) !important; border-color: var(--cn-accent) !important;
+  color: var(--dl-ink) !important;
+}
+.nova-form-submit:hover:not(:disabled) {
+  background: var(--dl-accent-deep) !important; border-color: var(--dl-accent-deep) !important;
+  color: var(--dl-ink) !important; transform: none !important; box-shadow: none !important;
+}
+.nova-form-submit:focus-visible { outline-color: var(--dl-accent-deep) !important; }
+.nova-form-success {
+  background: #F8F9FA !important; border-color: var(--cn-line) !important;
+  color: var(--dl-ink) !important;
+}
+.nova-form-success a { color: var(--dl-ink) !important; }
+.nova-form-error {
+  background: rgba(224, 120, 86, 0.12) !important; border-color: rgba(224, 120, 86, 0.55) !important;
+  color: var(--dl-ink) !important;
+}
+
+/* ---------- Footer: deep slate zone ---------- */
+.cn-colophon { background: #1A202C !important; border-top-color: #1A202C; }
+.cn-mega { color: rgba(255, 255, 255, 0.94) !important; }
+.cn-mega em { color: #fff !important; }
+.cn-col-grid, .cn-col-bar { border-top-color: rgba(255, 255, 255, 0.14) !important; }
+.cn-col-h { color: #fff !important; }
+.cn-col-muted, .cn-col-muted p { color: rgba(255, 255, 255, 0.65) !important; }
+.cn-colophon a { color: rgba(255, 255, 255, 0.8) !important; }
+.cn-colophon a:hover { color: #fff !important; }
+.cn-social a { border-color: rgba(255, 255, 255, 0.3) !important; color: #fff !important; }
+.cn-social a:hover { background: #fff !important; border-color: #fff !important; color: #1A202C !important; }
+.cn-small, .cn-small p { color: rgba(255, 255, 255, 0.5) !important; }
+.cn-colophon a:focus-visible, .cn-hero a:focus-visible { outline-color: #fff !important; }
+
+/* ---------- Injected chrome ---------- */
+.nova-progress i { background: var(--dl-ink) !important; }
+.nova-top {
+  background: rgba(255, 255, 255, 0.92) !important; color: var(--dl-ink) !important;
+  border-color: rgba(26, 32, 44, 0.25) !important;
+}
+.nova-top:hover { background: var(--dl-ink) !important; border-color: var(--dl-ink) !important; color: #fff !important; }
+.nova-mobilebar-call { color: #fff !important; }
+
+/* ---------- 10%: mobile Enquire (conversion) ---------- */
+.nova-mobilebar-enquire {
+  background: var(--cn-accent) !important; color: var(--dl-ink) !important;
+}
+
+/* Card + scene titles are h3 now: neutralize UA heading styles, classes carry the design. */
+h3.cn-card-title, h3.cn-scene-name {
+  margin: 0 !important; font-size: inherit !important; font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+/* ---------- Responsive keeps ---------- */
+@media (max-width: 1024px) {
+  .cn-scene-body { border-left: 0; border-top: 1px solid var(--cn-line); }
+  .cn-counter + .cn-counter { border-left: 0; border-top: 1px solid var(--cn-line); }
+}
+@media (max-width: 768px) {
+  /* keep the footer tail clear of the sticky mobile CTA bar */
+  .cn-colophon { padding-bottom: 96px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cn-ticker-track { animation: none; }
+}
